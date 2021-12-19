@@ -224,7 +224,7 @@ class Adafruit_MotorHAT:
     INTERLEAVE = 3
     MICROSTEP = 4
 
-    def __init__(self, addr = 0x60, freq = 1600, i2c=None, i2c_bus=None):
+    def __init__(self, addr = 0x60, freq = 1600, i2c=None, i2c_bus = 1):
         self._frequency = freq
         self.motors = [ Adafruit_DCMotor(self, m) for m in range(4) ]
         self.steppers = [ Adafruit_StepperMotor(self, 1), Adafruit_StepperMotor(self, 2) ]
